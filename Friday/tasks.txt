@@ -1,0 +1,3 @@
+Task 1 Run a full diagnostic on the new Python environment.
+Task 2 Review the latest codebase updates for the upcoming project.
+Task 3 Prepare the live demonstration of the Friday AI protocol.
