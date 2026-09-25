@@ -1,14 +1,14 @@
 # Friday Voice Assistant
 
-Friday is a small Windows voice assistant inspired by the Iron Man scene where Jarvis comes online and prepares the workspace. It listens for a wake command, reads the day's tasks, starts a random anthem, opens the tools I use, and gives a spoken daily briefing.
+Friday is a small Windows voice assistant inspired by the Iron Man scene where Jarvis comes online and prepares the workspace. It listens for a wake command, reads the day's tasks, starts a random anthem, opens configured tools, and gives a spoken daily briefing.
 
 ## How Friday Works
 
-1. Start `friday.py`.
+1. Start `friday.py` from the `friday_ai_assistant` folder.
 2. Friday turns on the microphone and adjusts for background noise.
 3. Say a command containing both **"Friday"** and **"initiate"** or **"initialize"**.
 4. Friday reads the tasks from `tasks.txt`.
-5. It randomly chooses one of the `anthem1.mp3` through `anthem10.mp3` files and plays it quietly.
+5. It randomly chooses one of the `anthem1.mp3` through `anthem10.mp3` files and plays it at low volume.
 6. It opens the configured workspace applications and websites.
 7. Windows SAPI speaks the greeting and reads the tasks aloud.
 8. The program stays open until the anthem finishes playing.
@@ -30,9 +30,20 @@ pip install SpeechRecognition pywin32 pygame PyAudio
 
 `PyAudio` may need an installation method compatible with your Python version and Windows system if a normal `pip install` fails.
 
+## Setup
+
+Clone or download the repository, then open PowerShell in this folder:
+
+```powershell
+cd friday_ai_assistant
+python -m pip install SpeechRecognition pywin32 pygame PyAudio
+```
+
+Keep `tasks.txt` and all ten anthem files in the same folder as `friday.py`. The program uses these relative paths when it runs.
+
 ## Run Friday
 
-Open PowerShell in this folder and run:
+Open PowerShell in the `friday_ai_assistant` folder and run:
 
 ```powershell
 python friday.py
@@ -57,7 +68,13 @@ When activated, the script currently tries to:
 - Open Gemini in a web browser
 - Start Visual Studio Code with the `code` command
 
-These paths and commands are specific to my computer. Change them in `friday.py` if your shortcuts, browser setup, or development tools are different.
+The shortcut paths and commands are specific to my computer. Change them in `friday.py` if your shortcuts, browser setup, or development tools are different. The program also expects the `code` command to be available on `PATH`.
+
+## Limitations
+
+- Friday listens for one command each time it starts; it does not run as a continuous wake-word service.
+- Speech recognition uses Google's online service, so an internet connection is required.
+- The configured desktop shortcuts and workspace tools must exist on the computer running the script.
 
 ## Project Story
 
@@ -68,10 +85,11 @@ Making it was much more challenging than I expected. I had to install and work w
 ## Project Files
 
 ```text
-Friday/
+friday_ai_assistant/
 ├── friday.py          # Main voice assistant program
 ├── tasks.txt          # Daily tasks read by Friday
 ├── start_friday.bat   # Optional Windows launcher
-├── anthem1.mp3 ...    # Random background anthems
+├── anthem1.mp3 ...
+├── anthem10.mp3       # Random background anthems
 └── README.md          # Project documentation
 ```
