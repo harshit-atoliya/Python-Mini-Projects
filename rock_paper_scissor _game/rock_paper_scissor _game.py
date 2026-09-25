@@ -5,7 +5,7 @@ import random
 computer_guess = ""
 
 # Define a function that plays one round of the Rock-Paper-Scissors game.
-def snake_game(a):
+def rock_game(a):
     # Use global so the chosen computer move is available outside this function.
     global computer_guess
 
@@ -53,7 +53,7 @@ while True:
         break
 
     # Run the game logic for one round and get the result plus the computer move.
-    result, computer_guess = snake_game(p1)
+    result, computer_guess = rock_game(p1)
 
     # Show both choices after the computer move has been generated.
     print(f"\nYou Choose : {p1} And Computer Choose : {computer_guess} ")

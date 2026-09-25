@@ -48,6 +48,17 @@ cd word_guessing_game
 python word_guessing_game.py
 ```
 
+### File Comparison
+Compares the contents of two sample files using SHA-1 hashes.
+**Concepts:** functions, file handling, binary file reading, and the `hashlib` module
+
+Run it with:
+
+```bash
+cd file_comparison_app
+python file_comparison_app.py
+```
+
 ### Date Calculator
 Calculates the difference between two dates in days, months, and years.
 **Concepts:** the `datetime` module, `strptime`, and `try`/`except` input validation
@@ -81,6 +92,10 @@ Open a terminal in the repository root, change into a project folder, and run it
 Python-Mini-Projects/
 ├── days_calculator/
 │   └── day_calculator.py
+├── file_comparison_app/
+│   ├── file_comparison_app.py
+│   ├── text.txt
+│   └── text1.txt
 ├── friday_ai_assistant/
 │   ├── friday.py
 │   ├── tasks.txt
