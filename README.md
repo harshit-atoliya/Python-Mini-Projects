@@ -66,12 +66,23 @@ Calculates the difference between two dates in days, months, and years.
 Run it with:
 
 ```bash
-cd days_calculator
+cd days_calculator_app
 python day_calculator.py
 ```
 
+### Voice Recorder
+Records audio from the microphone and saves the captured sound as WAV files.
+**Concepts:** microphone input, audio recording, and working with WAV files using `sounddevice`, `scipy`, and `wavio`
+
+Run it with:
+
+```bash
+cd voice_recorder
+python voice_recoder.py
+```
+
 ### Friday Voice Assistant
-A Windows voice assistant that listens for a wake command, reads daily tasks, opens configured tools, and gives a spoken briefing. See the [Friday README](friday_ai_assistant/README.md) for setup requirements and configuration details.
+A Windows voice assistant that listens for a wake command, reads daily tasks, opens configured tools, and gives a spoken briefing. See the [Friday README](friday_ai_assistant/README.md) for setup details.
 
 Run it with:
 
@@ -90,7 +101,7 @@ Open a terminal in the repository root, change into a project folder, and run it
 
 ```text
 Python-Mini-Projects/
-├── days_calculator/
+├── days_calculator_app/
 │   └── day_calculator.py
 ├── file_comparison_app/
 │   ├── file_comparison_app.py
@@ -99,13 +110,19 @@ Python-Mini-Projects/
 ├── friday_ai_assistant/
 │   ├── friday.py
 │   ├── tasks.txt
-│   └── README.md
+│   ├── README.md
+│   └── anthem1.mp3 ... anthem10.mp3
 ├── number_guessing_game/
 │   └── number_guessing_game.py
 ├── rock_paper_scissor _game/
 │   └── rock_paper_scissor _game.py
 ├── snake_water_gun_game/
 │   └── snake_water_gun_game.py
-└── word_guessing_game/
-    └── word_guessing_game.py
+├── voice_recorder/
+│   ├── requirements.txt
+│   ├── voice_recoder.py
+│   └── recording0.wav / recording1.wav (generated at runtime)
+├── word_guessing_game/
+│   └── word_guessing_game.py
+└── README.md
 ```
